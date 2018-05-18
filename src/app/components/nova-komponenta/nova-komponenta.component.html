@@ -1,0 +1,31 @@
+<p> 
+  Ovo je neki tekst: {{nekiTekst | uppercase}}  
+</p>
+<h3 appPromeniTekst >TEXTTTTTTTT</h3>
+
+<div>
+    Koren iz broja 25: {{25 | sqrt}}
+</div>
+
+<div> Meseci: 
+  <select (change)="myClickFunction($event)" name="mesec">
+    <option *ngFor="let i of meseci"> {{i}}</option>
+  </select>
+</div>
+
+<div>
+  <span *ngIf="isavailable; then uslov1 else uslov2"> Ovo je tekst koji...</span>
+  <ng-template #uslov1> Uslov je zadovoljen</ng-template>
+  <ng-template #uslov2> Uslov nije zadovoljen</ng-template>
+
+  Ovaj tekst se prikazuje uvek.
+</div>
+
+<button (click)="myClickFunction($event)">Klikni me !</button>
+
+<a routerLink = "sledeca">NOVA RUTA</a>
+<br />
+<br />
+
+<router-outlet></router-outlet>
+
