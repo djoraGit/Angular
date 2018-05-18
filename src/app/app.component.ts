@@ -17,4 +17,8 @@ export class AppComponent {
      this.componentproperty = this.myservice.serviceproperty;
   
    }
+
+   onClickSubmit(data) {
+    alert("Entered Email id : " +  data.emailid);
+ }
 }

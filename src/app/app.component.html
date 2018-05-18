@@ -1,4 +1,17 @@
 <h1 class="divdetails">Dobro dosli</h1>
 <h2>{{ danasnjiDan }}</h2>
+<h2>{{ componentproperty }}</h2>
 <app-nova-komponenta></app-nova-komponenta>
+
+
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
+    <input type = "text" name = "emailid" placeholder = "emailid" ngModel>
+    <br/>
+    <input type = "password" name = "passwd" placeholder = "passwd" ngModel>
+    <br/>
+    <input type = "submit" value = "submit">
+ </form>
+
+
 <app-user></app-user>
+

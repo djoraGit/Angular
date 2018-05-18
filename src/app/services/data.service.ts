@@ -16,6 +16,7 @@ export class DataService {
    getPosts(){
      //this.http.get('https://jsonplaceholder.typicode.com/posts').map(res => res.json());
      return this.http.get('https://jsonplaceholder.typicode.com/posts').pipe(map(res => res.json()));
-
+     
+     //subscribe((data) ⇒ console.log(data))
    }
 }

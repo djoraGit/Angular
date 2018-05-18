@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { MyserviceService } from '../../services/myservice.service';
+import { HttpservisService } from '../../services/httpservis.service';
 
 @Component({
   selector: 'app-user',
@@ -13,8 +15,12 @@ export class UserComponent implements OnInit {
   hobbies:string[];
   posts:Posts[];
 
-  constructor(private dataService:DataService) {
+  newcomponentproperty;
+
+  constructor(private dataService:DataService, private myservice: MyserviceService, private httpservisService: HttpservisService) {
     console.log('Constructor log ...');
+    
+    this.newcomponentproperty = this.myservice.serviceproperty;
    }
 
   ngOnInit() {
@@ -32,6 +38,8 @@ export class UserComponent implements OnInit {
       //console.log(posts);
       this.posts=posts;
     });
+
+    this.httpservisService.getPosts2();
    
   }
 
